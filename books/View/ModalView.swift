@@ -45,8 +45,6 @@ struct SheetView: View {
             
             Text("ygeu")
             
-            
-            
         }
     }
 }

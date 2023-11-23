@@ -12,13 +12,13 @@ class BrowseList {
     var section = [
         
         BrowseSectionList ( name: "Biography", imageName: "biography"),
-        BrowseSectionList ( name: "Books in English", imageName: ""),
+        BrowseSectionList ( name: "Books in English", imageName: "english"),
         BrowseSectionList ( name: "Comics & Graphic Novels", imageName: "comic"),
         BrowseSectionList ( name: "Computing & Internet", imageName: "computer"),
         BrowseSectionList ( name: "Crime & Thrillers", imageName: "crime"),
         BrowseSectionList ( name: "Education", imageName: "education"),
         BrowseSectionList ( name: "Fiction & Literature", imageName: "fiction"),
-        BrowseSectionList ( name: "Health & Well-Being", imageName: ""),
+        BrowseSectionList ( name: "Health & Well-Being", imageName: "health"),
         BrowseSectionList ( name: "Kids", imageName: "kids"),
         BrowseSectionList ( name: "Non-Fiction", imageName: "nonfic"),
         BrowseSectionList ( name: "Religion & Spirituality", imageName: "religion"),

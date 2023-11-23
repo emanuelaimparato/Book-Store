@@ -9,6 +9,14 @@ import SwiftUI
 
 struct BrowseSectionsView: View {
     
+    init() {
+            UINavigationBar.appearance()
+                .largeTitleTextAttributes =
+            [.font: UIFont(descriptor:
+                            UIFontDescriptor.preferredFontDescriptor(withTextStyle: .extraLargeTitle)
+                .withDesign(.serif)!, size: 35)]
+        }
+    
     var sections = BrowseList()
     
     var body: some View {
@@ -19,24 +27,33 @@ struct BrowseSectionsView: View {
                 
                 Section {
                     
-                    HStack{
+                    NavigationLink (destination: DestinationView()){
                         
-                        Image("topcharts")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width:40, height:30)
+                        HStack{
+                            
+                            Image("topcharts")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width:40, height:30)
+                            
+                            Text("Top Charts")
+                                .fontDesign(.serif)
+                        }
                         
-                        Text("Top Charts")
                     }
                     
-                    HStack{
+                    NavigationLink (destination: DestinationView()){
                         
-                        Image("")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width:40, height:30)
-                        
-                        Text("Special Offers & Free")
+                        HStack{
+                            
+                            Image("target")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width:40, height:30)
+                            
+                            Text("Special Offers & Free")
+                                .fontDesign(.serif)
+                        }
                     }
                 }
                 
@@ -44,20 +61,25 @@ struct BrowseSectionsView: View {
                     
                     ForEach(sections.section){ sec in
                         
-                        HStack{
+                        NavigationLink (destination: DestinationView()){
                             
-                            Image(sec.imageName)
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width:40, height:30)
-                            
-                            Text(sec.name)
+                            HStack{
+                                
+                                Image(sec.imageName)
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width:40, height:30)
+                                
+                                Text(sec.name)
+                                    .fontDesign(.serif)
+                            }
                         }
                     }
                     
                 } header: {
                     
                     Text("Genres")
+                        .fontDesign(.serif)
                 }
 
                 
@@ -72,7 +94,7 @@ struct BrowseSectionsView: View {
 #Preview {
     
     BrowseSectionsView (
-        sections: BrowseList()
+        //sections: BrowseList()
     )
     
 }
